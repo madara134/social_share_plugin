@@ -95,6 +95,8 @@ public class SocialSharePlugin
         plugin.channel = channel;
         plugin.activity = registrar.activity();
         channel.setMethodCallHandler(plugin);
+
+        registrar.addActivityResultListener(plugin);
     }
 
     @Override
