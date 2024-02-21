@@ -54,17 +54,19 @@ class _MyAppState extends State<MyApp> {
             Center(
               child: Text('Running on: $_platformVersion\n'),
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Share to Instagram'),
               onPressed: () async {
-                File file = await ImagePicker.pickImage(source: ImageSource.gallery);
+                File file =
+                    await ImagePicker.pickImage(source: ImageSource.gallery);
                 await SocialSharePlugin.shareToFeedInstagram(path: file.path);
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Share to Facebook'),
               onPressed: () async {
-                File file = await ImagePicker.pickImage(source: ImageSource.gallery);
+                File file =
+                    await ImagePicker.pickImage(source: ImageSource.gallery);
                 await SocialSharePlugin.shareToFeedFacebook(
                     path: file.path,
                     onSuccess: (_) {
@@ -81,7 +83,7 @@ class _MyAppState extends State<MyApp> {
                     });
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Share to Facebook Link'),
               onPressed: () async {
                 String url = 'https://flutter.dev/';
@@ -107,7 +109,7 @@ class _MyAppState extends State<MyApp> {
                 print(result);
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Share to Twitter'),
               onPressed: () async {
                 String url = 'https://flutter.dev/';
